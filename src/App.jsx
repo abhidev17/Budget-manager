@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useLayoutEffect, useState } from 'react'
 import Budget from './components/Budget'
 import Charts from './components/Charts'
 import Dashboard from './components/Dashboard'
@@ -50,6 +50,10 @@ function safeReadNumber(key, fallback) {
   return Number.isFinite(parsedValue) ? parsedValue : fallback
 }
 
+function normalizeTheme(themeValue) {
+  return themeValue === 'dark' || themeValue === 'light' ? themeValue : null
+}
+
 function createId() {
   if (typeof crypto !== 'undefined' && typeof crypto.randomUUID === 'function') {
     return crypto.randomUUID()
@@ -89,9 +93,9 @@ function App() {
   const [transactions, setTransactions] = useState(() => safeRead(storageKeys.transactions, []))
   const [budget, setBudget] = useState(() => safeReadNumber(storageKeys.budget, 0))
   const [theme, setTheme] = useState(() => {
-    const storedTheme = safeRead(storageKeys.theme, '')
+    const storedTheme = normalizeTheme(safeRead(storageKeys.theme, ''))
 
-    if (storedTheme === 'light' || storedTheme === 'dark') {
+    if (storedTheme) {
       return storedTheme
     }
 
@@ -120,13 +124,13 @@ function App() {
     window.localStorage.setItem(storageKeys.budget, JSON.stringify(budget))
   }, [budget])
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (typeof window === 'undefined') {
       return
     }
 
+    document.documentElement.setAttribute('data-theme', theme)
     window.localStorage.setItem(storageKeys.theme, theme)
-    document.documentElement.dataset.theme = theme
   }, [theme])
 
   useEffect(() => {
