@@ -1,85 +1,182 @@
-# FinTrack Budget Manager
+# 💰 FinTrack - Smart Budget Manager
 
-FinTrack is a modern personal finance dashboard built with React and Vite. It helps users track income, expenses, budgets, savings goals, and spending trends with a clean fintech-style interface.
+A modern and responsive **Budget Management Application** built using **React.js**.  
+FinTrack helps users track income, expenses, budgets, savings, and understand their spending habits through a clean financial dashboard.
 
-## About Project
+This project was created as part of the **μLearn React Budget Application Challenge**.
 
-This project is a browser-only budgeting application with persistent LocalStorage support. It is designed to feel like a polished banking dashboard while still staying beginner friendly and easy to extend.
+---
 
-## Features
+## 🚀 Live Demo
 
-- Dashboard cards for total balance, income, expenses, and savings percentage
-- Animated number counters
-- Add transaction form with validation and automatic reset
-- Transaction history with delete, search, and category filters
-- Monthly budget management with safe, warning, and over-budget progress states
-- Expense pie chart and income vs expense bar chart using Recharts
-- LocalStorage persistence for transactions, budget, savings goal, and theme
-- Dark and light mode with saved preference
-- Recent transactions widget
-- Financial health score
-- Biggest expense card
-- Savings goal tracker
-- Clear all data button
-- Toast notifications
-- Responsive empty states for an improved first-run experience
+🔗 https://abhidev17.github.io/Budget-manager/
 
-## Tech Stack
+---
 
-- React.js
-- Vite
-- CSS only
-- LocalStorage
-- Recharts
+## 📸 Preview
 
-## Screenshots
+(Add screenshots of your application here)
 
-Add screenshots after running the app locally and capturing the dashboard, transactions, and charts screens.
+---
 
-- Dashboard view: `./screenshots/dashboard.png`
-- Transactions view: `./screenshots/transactions.png`
-- Charts view: `./screenshots/charts.png`
+## ✨ Features
 
-## Installation Steps
+### 📊 Financial Dashboard
+- View total balance
+- Track total income
+- Monitor total expenses
+- Calculate savings percentage
 
-1. Install dependencies:
+### 💸 Transaction Management
+- Add income and expense transactions
+- Categorize transactions
+- View transaction history
+- Delete transactions
+- Search and filter records
 
-	```bash
-	npm install
-	```
+### 🎯 Budget Tracking
+- Set monthly budget goals
+- Track spending progress
+- View remaining budget
+- Budget status indicator
 
-2. Start the development server:
+### 📈 Data Visualization
+- Expense category visualization
+- Income vs expense overview
+- Financial insights dashboard
 
-	```bash
-	npm run dev
-	```
+### 🧠 Financial Health Score
+- Calculates a money management score
+- Gives spending insights
+- Helps improve financial habits
 
-3. Build for production:
+### 🌗 Theme Support
+- Dark mode
+- Light mode
+- Smooth theme switching
+- Theme preference saved automatically
 
-	```bash
-	npm run build
-	```
+### 💾 Persistent Storage
+Uses browser LocalStorage to save:
 
-4. Preview the production build:
+- Transactions
+- Budget details
+- Theme preferences
 
-	```bash
-	npm run preview
-	```
+Your data stays even after refreshing the page.
 
-## GitHub Pages Deployment Link
+---
 
-After publishing the repository, deploy the built `dist` folder to GitHub Pages and update this link:
+## 🛠️ Tech Stack
 
-[https://<your-github-username>.github.io/fintrack-budget-manager/](https://<your-github-username>.github.io/fintrack-budget-manager/)
+- ⚛️ React.js
+- ⚡ Vite
+- 🎨 CSS3
+- 📊 Recharts
+- 💾 LocalStorage API
+- 🌐 GitHub Pages
 
-## Push And Deploy Workflow
+---
 
-1. Push your code to the default branch used by your repository (`main` or `master`).
-2. GitHub Actions runs the workflow in [.github/workflows/deploy.yml](.github/workflows/deploy.yml).
-3. The workflow builds the app with the GitHub Pages base path and deploys the `dist` folder automatically.
-4. Enable GitHub Pages in repository settings if it is not already turned on.
+## 📂 Project Structure
 
-## Notes
+```
+Budget-manager/
 
-- The app stores all user data in the browser, so refreshes do not clear progress.
-- If you change the repository name, update the GitHub Pages URL accordingly.
+├── src/
+│   ├── components/
+│   │   ├── Dashboard.jsx
+│   │   ├── TransactionForm.jsx
+│   │   ├── TransactionList.jsx
+│   │   ├── Budget.jsx
+│   │   └── Charts.jsx
+│   │
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── styles.css
+│
+├── public/
+├── package.json
+├── vite.config.js
+└── README.md
+```
+
+---
+
+## ⚙️ Installation & Setup
+
+Clone the repository
+
+```bash
+git clone https://github.com/abhidev17/Budget-manager.git
+```
+
+Navigate to project folder
+
+```bash
+cd Budget-manager
+```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Run development server
+
+```bash
+npm run dev
+```
+
+Build for production
+
+```bash
+npm run build
+```
+
+---
+
+## 🌟 React Concepts Used
+
+- Components
+- Props
+- useState Hook
+- useEffect Hook
+- Conditional Rendering
+- Event Handling
+- LocalStorage Management
+
+---
+
+## 🎨 UI Highlights
+
+- Modern fintech dashboard design
+- Glassmorphism cards
+- Gradient backgrounds
+- Smooth animations
+- Responsive layouts
+- Mobile-friendly interface
+
+---
+
+## 📌 Future Improvements
+
+- User authentication
+- Cloud database support
+- Export transactions as CSV
+- Monthly reports
+- AI spending suggestions
+
+---
+
+## 👨‍💻 Developed By
+
+**Abhidev Mohan**
+
+GitHub:  
+https://github.com/abhidev17
+
+---
+
+⭐ If you like this project, consider giving it a star!
