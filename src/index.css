@@ -1,15 +1,15 @@
 :root {
   color-scheme: light;
-  --bg: #eef4ff;
-  --surface: rgba(255, 255, 255, 0.72);
+  --bg: #f8fafc;
+  --surface: rgba(255, 255, 255, 0.74);
   --surface-solid: #ffffff;
-  --surface-strong: rgba(255, 255, 255, 0.9);
+  --surface-strong: rgba(255, 255, 255, 0.94);
   --text: #0f172a;
-  --muted: #5b6478;
-  --border: rgba(148, 163, 184, 0.22);
-  --shadow: 0 24px 70px rgba(15, 23, 42, 0.12);
-  --primary: #2563eb;
-  --primary-strong: #0ea5e9;
+  --muted: #64748b;
+  --border: rgba(148, 163, 184, 0.2);
+  --shadow: 0 20px 50px rgba(15, 23, 42, 0.08);
+  --primary: #3b82f6;
+  --primary-strong: #6366f1;
   --accent: #14b8a6;
   --danger: #ef4444;
   --warning: #f59e0b;
@@ -54,9 +54,10 @@ body {
   min-height: 100vh;
   color: var(--text);
   background:
-    radial-gradient(circle at top right, rgba(96, 165, 250, 0.22), transparent 34%),
-    radial-gradient(circle at bottom left, rgba(45, 212, 191, 0.18), transparent 28%),
-    linear-gradient(180deg, #f7fbff 0%, var(--bg) 100%);
+    radial-gradient(circle at 12% 10%, rgba(99, 102, 241, 0.12), transparent 24%),
+    radial-gradient(circle at 88% 16%, rgba(6, 182, 212, 0.12), transparent 26%),
+    radial-gradient(circle at 18% 84%, rgba(16, 185, 129, 0.11), transparent 24%),
+    linear-gradient(135deg, #f8fafc 0%, #eef2ff 46%, #f0fdfa 100%);
   font-family: var(--font-body);
   transition:
     background-color 0.35s ease,
@@ -74,25 +75,25 @@ body::before,
 body::after {
   content: '';
   position: fixed;
-  width: 42rem;
-  height: 42rem;
+  width: 34rem;
+  height: 34rem;
   border-radius: 50%;
-  filter: blur(92px);
+  filter: blur(110px);
   pointer-events: none;
   z-index: -1;
-  opacity: 0.7;
+  opacity: 0.85;
 }
 
 body::before {
-  top: -12rem;
-  right: -10rem;
-  background: rgba(96, 165, 250, 0.28);
+  top: -9rem;
+  right: -8rem;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.24), transparent 70%);
 }
 
 body::after {
-  bottom: -14rem;
-  left: -10rem;
-  background: rgba(45, 212, 191, 0.22);
+  bottom: -10rem;
+  left: -8rem;
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.2), transparent 68%);
 }
 
 #root {
@@ -111,6 +112,11 @@ h3 {
 
 p {
   margin-top: 0;
+}
+
+::selection {
+  background: rgba(59, 130, 246, 0.18);
+  color: var(--text);
 }
 
 button,
